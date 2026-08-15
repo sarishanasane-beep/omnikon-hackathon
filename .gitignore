@@ -58,3 +58,8 @@ service-account.json
 
 # Claude Code specific
 .claude/
+
+# Local configuration files with API keys
+*.bat
+antigravity.bat
+.bat
