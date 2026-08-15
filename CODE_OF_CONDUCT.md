@@ -56,8 +56,8 @@ This Code of Conduct also applies when an individual is representing the project
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project team at:
 
-- **Email:** [conduct@example.com]
-- **Direct message:** [Team lead contact]
+- **Email:** sarishanasane@gmail.com
+- **Direct message:** Sarish Anasane (Team Lead)
 
 All complaints will be reviewed and investigated promptly and fairly.
 
@@ -115,4 +115,4 @@ If you have questions about this Code of Conduct, please contact the project tea
 
 ---
 
-**Last Updated:** August 15, 2026
+**Last Updated:** August 16, 2026

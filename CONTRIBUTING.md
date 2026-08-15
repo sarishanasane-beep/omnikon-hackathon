@@ -1,4 +1,4 @@
-# Contributing to AI Omniroute
+# Contributing to PHOENIX
 
 Thank you for considering contributing to this project! This document provides guidelines for contributing to our hackathon project.
 
@@ -49,31 +49,49 @@ We welcome pull requests! Here's the process:
 
 ### Prerequisites
 
+**Hardware:**
+- ESP32 development boards
+- SX1278 LoRa modules
+- Sensors: MAX30102, MPU6050, BMP280, NEO-6M GPS
+- 0.96" OLED display
+
+**Software:**
 ```bash
-# List prerequisites here
+Python >= 3.8
+PlatformIO or Arduino IDE
+Git
 ```
 
 ### Installation
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/AI-omniroute.git
-cd AI-omniroute
+git clone https://github.com/your-username/omnikon-hackathon.git
+cd omnikon-hackathon
 
-# Install dependencies
-npm install
-# or your package manager
+# Backend dependencies
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install fastapi uvicorn
 
-# Set up environment
-cp .env.example .env
-# Configure your .env file
+# Firmware setup
+# Open firmware/ in PlatformIO or Arduino IDE
+# Install required libraries (RadioLib, MAX30102, MPU6050, etc.)
 ```
 
 ### Running Locally
 
 ```bash
-# Start development server
-npm run dev
+# Start backend API
+cd backend
+uvicorn main:app --reload
+
+# Upload firmware to ESP32 devices via PlatformIO/Arduino IDE
+
+# Open dashboard
+cd dashboard
+python -m http.server 8080
 ```
 
 ## Coding Standards
@@ -116,8 +134,9 @@ npm test
 
 ## Security
 
-- Never commit API keys, passwords, or sensitive data
-- Use environment variables for secrets
+- Never commit API keys, passwords, Wi-Fi credentials, or sensitive data
+- Use environment variables or config files for secrets (excluded via `.gitignore`)
+- Test LoRa encryption if implementing security features
 - Report security vulnerabilities privately (see [SECURITY.md](SECURITY.md))
 
 ## Attribution
@@ -129,18 +148,15 @@ All contributors will be credited in:
 
 ## Hackathon Timeline
 
-This is a hackathon project with specific deadlines:
-- **Round 1 Deadline:** [Date]
-- **Round 2 (Live Demo):** [Date]
-
-Please keep timing in mind when contributing.
+This is an Omnikon Hackathon 2026 project with specific deadlines. Please keep timing in mind when contributing and prioritize features critical for demo readiness.
 
 ## Questions?
 
 Feel free to:
 - Open an issue for discussion
-- Contact team members (see README.md)
-- Join our communication channel: [Discord/Slack/etc.]
+- Contact team members:
+  - **Sarish Anasane**: sarishanasane@gmail.com | +91 9511231195
+  - **Arya Ghate**: aryaghate11@gmail.com | +91 7385749059
 
 ## License
 
@@ -148,4 +164,4 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ---
 
-Thank you for contributing to AI Omniroute!
+Thank you for contributing to PHOENIX! Together, we're building technology that saves lives.
