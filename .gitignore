@@ -56,7 +56,7 @@ service-account.json
 *.pem
 *.key
 
-# Claude Code specific
+# IDE and development tools
 .claude/
 
 # Local configuration files with API keys
